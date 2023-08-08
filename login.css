@@ -242,32 +242,46 @@ hr::after {
     margin-top: 10px;
 }
 
+.sns-btn-group li{
+    position: relative;
+}
+
 ul a[class^="btn-sns"]::before{
     content: "";
     position: absolute;
     width: 28px;
     height: 28px;
     left: 12px;
-    transform: translate(100%);
-    background-color: #00BF18;
-    background: url(./images/css_sprites01.png) no-repeat -5px -8px  /84px 84px;
+    background-image: url(./images/small/css_sprites03.png); 
+    background-repeat: no-repeat;
+    background-size: 96px;
 }
 
 .btn-sns-login-google::before{
-    background-position: -114px -10px;
+    background-position: -58px -10px;
 }
+
 .btn-sns-login-facebook{
     border-color: #2D9CDB;
+}
+.btn-sns-login-facebook::before{
+    background-position: -10px -10px ;
 }
 
 
 .btn-sns-login-naver{
     border-color: #00BF18;
-    background: url(./images/naver-logo.png) no-repeat 12px 50% /28px 28px;
 }
+.btn-sns-login-naver::before{
+    background-position: -58px -58px ;
+}
+
+
 .btn-sns-login-kakao{
     border-color: #F2C94C;
-    background: url(./images/message-circle.png) no-repeat 12px 50% /28px 28px;
+}
+.btn-sns-login-kakao::before{
+    background-position: -10px -58px ;
 }
 
 .close{
