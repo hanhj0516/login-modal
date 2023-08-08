@@ -27,7 +27,8 @@ button,
 label,
 p,
 a,
-hr
+hr,
+ul,li
 {
     padding: 0;
     margin: 0;
@@ -46,6 +47,10 @@ button{
 a{
     text-decoration: none;
     color: inherit;
+}
+
+ul,li{
+    list-style: none;
 }
 
 a:hover{
@@ -101,7 +106,7 @@ h2{
     padding: 26px 24px 25px 24px;
 }
 
-main>p{
+main>h3{
     font-size: 20px;
     font-weight: 500;
     padding-bottom: 24px;
@@ -119,7 +124,6 @@ main>p{
     color: #767676;
     box-sizing: border-box;
 }
-
 
 .user-password{
     margin-top:  10px;
@@ -179,12 +183,9 @@ main>p{
     opacity: 0;
 }
 
-
 .inp-hold:checked+.label-hold::after {
     opacity: 1;
 }
-
-
 
 .login-footer{
     text-align: center;
@@ -201,7 +202,7 @@ hr {
     border-top: 1px solid #C4C4C4;
     text-align: center;
     overflow: visible;
-    margin-top: 7px;
+    margin-top: 38px;
 }
 
 hr::after {
@@ -214,15 +215,13 @@ hr::after {
     font-size: 14px;
 }
 
-
 /* 버튼 */
 [class^=btn]{
-    height: 50px;
-    flex-shrink: 0;
     border-radius: 5px;
     font-size: 16px;
     color:#767676;
     box-sizing: border-box;
+    padding: 15px 0;
 }
 
 .btn-login{
@@ -234,58 +233,51 @@ hr::after {
     width: 100%;
 }
 
-.btn-group{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-    margin-top: 14px;
-    height: auto;
-}
-
-[class^="btn-login-"]{
+[class^="btn-sns"]{
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
     border: 1px solid #767676;
+    margin-top: 10px;
 }
 
-/* [class^="btn-login-"]::before{
-    display: block;
+ul a[class^="btn-sns"]::before{
     content: "";
+    position: absolute;
     width: 28px;
     height: 28px;
-    justify-content: left;
-    margin: 12px;
-    float: left;
-    background-color: #2F80ED;
-} */
-
-
-
-.btn-login-google{
-    background: url(./images/Google__G__Logo\ 1.png) no-repeat 12px 50% /28px 28px;
+    left: 12px;
+    transform: translate(100%);
+    background-color: #00BF18;
+    background: url(./images/css_sprites01.png) no-repeat -5px -8px  /84px 84px;
 }
-.btn-login-facebook{
+
+.btn-sns-login-google::before{
+    background-position: -114px -10px;
+}
+.btn-sns-login-facebook{
     border-color: #2D9CDB;
-    background: url(./images/facebook.png) no-repeat 12px 50% /28px 28px;
 }
-.btn-login-naver{
+
+
+.btn-sns-login-naver{
     border-color: #00BF18;
     background: url(./images/naver-logo.png) no-repeat 12px 50% /28px 28px;
 }
-.btn-login-kakao{
+.btn-sns-login-kakao{
     border-color: #F2C94C;
     background: url(./images/message-circle.png) no-repeat 12px 50% /28px 28px;
 }
 
 .close{
     background-image: url(./images/close.png);
-    background-size: cover;
-    width: 16px;
-    height: 16px;
+    background-size: 16px;
+    background-repeat: no-repeat;
     position: absolute;
-    right: 24px;
-    top:22px;
+    background-position: 50%;
+    right: 5px;
+    top:0;
+    padding: 29px;
+    
 }
